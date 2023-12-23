@@ -338,7 +338,9 @@ def votekick(player):
     global commands
     if output_votekick:
         print("Votekicking " + str(player))
-    commands.append("callvote kick " + str(player.userid))
+        commands.append("say [tf2-bot-kicker] Can we please kick the bot - " + str(player.name))
+        commands.append("callvote kick " + str(player.userid))
+        sleep(20)
 
 def execute():
     if len(commands) > 0:
